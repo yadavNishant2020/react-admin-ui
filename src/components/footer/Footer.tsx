@@ -3,7 +3,9 @@ function Footer() {
   return (
     <div className="footer">
       <span>
-        </span><span></span>
+        Nish_Admin
+      </span>
+      <span>© 2024 Created By Nishant Singh Yadav.</span>
     </div>
   )
 }
