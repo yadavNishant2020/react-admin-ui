@@ -1,8 +1,8 @@
-import Home from '../pages/home/Home'
-import Products from '../pages/products/Products'
-import Users from '../pages/users/Users'
-import Navbar from '../src/components/navbar/Navbar'
-import Login from '../pages/login/Login'
+import Home from "./pages/home/Home";
+import Products from './pages/products/Products'
+import Users from './pages/users/Users'
+import Navbar from './components/navbar/Navbar'
+import Login from './pages/login/Login'
 import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
 import {
