@@ -165,6 +165,21 @@ export const menu = [
       email: "angel@gmail.com",
       amount: "1.560",
     },
+    {
+      id: 8,
+      img: "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      username: "Juan Harrington",
+      email: "juan@gmail.com",
+      amount: "2.134",
+    },
+    {
+      id: 9,
+      img: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      username: "Augusta McGee",
+      email: "augusta@gmail.com",
+      amount: "1.932",
+    },
+
   ];
   
   export const chartBoxUser = {
