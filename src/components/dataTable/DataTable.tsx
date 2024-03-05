@@ -3,19 +3,19 @@ import {
     GridColDef,
     GridToolbar,
   } from "@mui/x-data-grid";
-  import "./dataTable.scss";
   import { Link } from "react-router-dom";
   // import { useMutation, useQueryClient } from "@tanstack/react-query";
-  
+import "./dataTable.scss"
   type Props = {
     columns: GridColDef[];
     rows: object[];
+    slug: string;
   };
 
   const DataTable = (props: Props) => {
-  
+
     // TEST THE API
-  
+
     // const queryClient = useQueryClient();
     // // const mutation = useMutation({
     // //   mutationFn: (id: number) => {
@@ -27,20 +27,20 @@ import {
     // //     queryClient.invalidateQueries([`all${props.slug}`]);
     // //   }
     // // });
-  
+
     const handleDelete = (id: number) => {
-      //delete the item
-      // mutation.mutate(id)
+      // delete the item
+      console.log(`Id no. ${id} has been deleted,`);
     };
-  
+
     const actionColumn: GridColDef = {
       field: "action",
       headerName: "Action",
-      width: 200,
+      width: 100,
       renderCell: (params) => {
         return (
           <div className="action">
-            <Link to={`/${params.row.id}`}>
+            <Link to={`/${props.slug}/${params.row.id}`}>
               <img src="/view.svg" alt="" />
             </Link>
             <div className="delete" onClick={() => handleDelete(params.row.id)}>
@@ -50,7 +50,7 @@ import {
         );
       },
     };
-  
+
     return (
       <div className="dataTable">
         <DataGrid
@@ -58,7 +58,7 @@ import {
           rows={props.rows}
           columns={[...props.columns, actionColumn]}
           initialState={{
-            pagination: {
+             pagination: {
               paginationModel: {
                 pageSize: 10,
               },

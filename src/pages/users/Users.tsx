@@ -11,19 +11,28 @@ import "./users.scss"
 import { userRows } from "../../data";
 
 const columns: GridColDef[] = [
-  { field: 'col1', headerName: 'Column 1', width: 150, editable: true},
-  { field: 'status', headerName: 'Status', width: 100, type:'boolean'},
-  { field: 'col2', headerName: 'Column 2', width: 150, editable: true},
-  { field: 'col2', headerName: 'Column 2', width: 150, editable: true},
+  { field: 'id', headerName: 'ID', width: 90},
+  { field: 'avatar', headerName: 'Avatar', width: 100, renderCell: (params) => {
+    return <img src={params.row.img || "/noavatar.png"} alt="" />;
+  }},
+  { field: 'firstName',type:"string", headerName: 'First Name', width: 150, editable: true},
+  { field: 'lastName',type:"string", headerName: 'Last Name', width: 150, editable: true},
+  { field: 'email',type:"string", headerName: 'Email', width: 200},
+  { field: 'phone',type:"string", headerName: 'Phone', width: 150},
+  { field: 'createdAt',type:"string", headerName: 'Created At', width: 100},
+  { field: 'verified',type:"boolean", headerName: 'verified', width: 100},
 ];
 function Users() {
   return (
-    <div className='users'>
+    <div className='user'>
       <div className="info">
+        <div className="subInfo">
         <h1>Users</h1>
         <button>Add New User</button>
+
+        </div>
         <div className="table">
-          <DataTable columns={columns} rows={userRows} />
+          <DataTable slug="users" columns={columns} rows={userRows} />
         </div>
       </div>
     </div>

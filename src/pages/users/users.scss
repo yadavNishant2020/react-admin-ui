@@ -1,2 +1,13 @@
-.user{
+.user {
+    .subInfo{
+        display: flex;
+        gap: 30px;
+        margin-bottom: 20px;
+        align-items: center;
+
+        button{
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
 }
