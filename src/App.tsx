@@ -11,6 +11,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './styles/global.scss'
+import SingleProduct from "./pages/singleproduct/SingleProduct";
+import SingleUser from "./pages/singleUser/SingleUser";
 
 function App() {
 
@@ -39,6 +41,8 @@ function App() {
         { path: "/", element: <Home /> },
         { path: "products", element: <Products /> },
         { path: "users", element: <Users /> },
+        { path: "products/:id", element: <SingleProduct /> },
+        { path: "users/:id", element: <SingleUser /> },
       ]
     },
     { path: "login", element: <Login /> },
