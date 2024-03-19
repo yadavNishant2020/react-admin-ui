@@ -1,4 +1,5 @@
 import Single from "../../components/single/Single";
+import { singleProduct } from "../../data";
 import "./singleProduct.scss";
 
 function SingleProduct() {
@@ -7,7 +8,7 @@ function SingleProduct() {
 
   return (
     <div>
-      <Single />
+      <Single {...singleProduct}/>
 
     </div>
   )

@@ -8,9 +8,9 @@ function Navbar() {
         Nish_Admin
       </div>
       <div className="icons">
-        <img src="/search.svg" alt="" />
-        <img src="/app.svg" alt="" />
-        <img src="/expand.svg" alt="" />
+        <img src="/search.svg" alt="" className="icon" />
+        <img src="/app.svg" alt="" className="icon" />
+        <img src="/expand.svg" alt="" className="icon" />
         <div className="notification">
           <img src="/notifications.svg" alt="" />
           <span>1</span>
@@ -19,7 +19,7 @@ function Navbar() {
           <img src="https://avatars.githubusercontent.com/u/75436573?v=4" alt="" />
           <span>Nish</span>
         </div>
-        <img src="/setting.svg" alt="" />
+        <img src="/setting.svg" alt="" className="icon" />
       </div>
     </div>
   )
