@@ -1,13 +1,53 @@
 .user {
-    .subInfo{
-        display: flex;
-        gap: 30px;
-        margin-bottom: 20px;
-        align-items: center;
+  height: 100%;
+  max-height: calc(
+    100vh - 160px
+  ); // Account for navbar (70px) + footer (50px) + padding (40px)
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
-        button{
-            padding: 5px;
-            cursor: pointer;
-        }
+  .info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .subInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    min-height: 60px;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
     }
+
+    button {
+      padding: 10px 16px;
+      background-color: #5a67d8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #4c51bf;
+      }
+    }
+  }
+
+  .table {
+    flex: 1;
+    overflow: hidden;
+    min-height: 0;
+    max-height: calc(100% - 80px); // Account for header
+  }
 }

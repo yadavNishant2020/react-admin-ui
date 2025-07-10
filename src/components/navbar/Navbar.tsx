@@ -17,7 +17,6 @@ function Navbar() {
         </div>
         <div className="user">
           <img src="https://avatars.githubusercontent.com/u/75436573?v=4" alt="" />
-          <span>Nish</span>
         </div>
         <img src="/setting.svg" alt="" className="icon" />
       </div>
